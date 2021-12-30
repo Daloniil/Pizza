@@ -9,7 +9,7 @@ import photoId52 from "../../Assets/Drink/Сік-яблучно-виноград
 let initialState = {
   drink: [
     {
-      id: 49,
+      id: 56,
       photoURL: photoId49,
       name: "Сік яблучно-гранатовий 1л",
       cost: 28,
@@ -17,7 +17,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 50,
+      id: 57,
       photoURL: photoId50,
       name: "Pepsi 1 л",
       cost: 25,
@@ -25,7 +25,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 51,
+      id: 58,
       photoURL: photoId51,
       name: "Сік мульти-вітамінний 1л",
       cost: 28,
@@ -33,7 +33,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 52,
+      id: 59,
       photoURL: photoId52,
       name: "Сік яблучно-виноградний 1л",
       cost: 28,

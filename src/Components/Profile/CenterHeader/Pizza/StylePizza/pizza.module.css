@@ -1,10 +1,31 @@
 .pizza {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   max-width: 100%;
   padding: 50px 0 0 0;
   background-color: #f2f0eb;
+}
+.pizza .pages {
+  text-align: center;
+  font-size: 20px;
+}
+.pizza .pages .page {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+
+.pizza .pages .page:hover {
+  color: #ead69b;
+}
+
+.pizza .pages .active_page {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  color: yellow;
+}
+.pizza .pizza_con {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .pizza .pizza_nav {
   text-decoration: none;

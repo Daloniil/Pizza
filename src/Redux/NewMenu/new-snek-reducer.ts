@@ -9,7 +9,7 @@ import photoId48 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x60
 let initialState = {
   snek: [
     {
-      id: 45,
+      id: 52,
       photoURL: photoId45,
       name: "Картопляні медальйони",
       cost: 54,
@@ -17,7 +17,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 46,
+      id: 53,
       photoURL: photoId46,
       name: "Картопляні кульки",
       cost: 36,
@@ -25,7 +25,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 47,
+      id: 54,
       photoURL: photoId47,
       name: "М’ясні нагетси 9 шт",
       cost: 72,
@@ -33,7 +33,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 48,
+      id: 55,
       photoURL: photoId48,
       name: "Куряча ніжка 4 шт",
       cost: 88,

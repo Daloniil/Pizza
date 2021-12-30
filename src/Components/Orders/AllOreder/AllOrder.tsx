@@ -51,35 +51,35 @@ export const AllOrder: React.FC = () => {
   const ves = useSelector(getves);
   const size = useSelector(getsize);
 
-  if (number.id <= 13) {
+  if (number.id <= 20) {
     newItem(pizza[number.id - 1], ves, size);
-  } else if (number.id >= 14 && number.id < 20) {
-    newItem(drink[number.id - 14], undefined, undefined);
-  } else if (number.id >= 20 && number.id < 33) {
-    newItem(sneks[number.id - 20], undefined, undefined);
-  } else if (number.id >= 33 && number.id < 41) {
-    newItem(sous[number.id - 33], undefined, undefined);
-  } else if (number.id >= 41 && number.id < 45) {
-    newItem(npizza[number.id - 41], ves, undefined);
-  } else if (number.id >= 45 && number.id < 49) {
-    newItem(nsnek[number.id - 45], undefined, undefined);
-  } else if (number.id >= 49 && number.id < 53) {
-    newItem(ndrink[number.id - 49], undefined, undefined);
+  } else if (number.id >= 21 && number.id < 27) {
+    newItem(drink[number.id - 21], undefined, undefined);
+  } else if (number.id >= 27 && number.id < 40) {
+    newItem(sneks[number.id - 27], undefined, undefined);
+  } else if (number.id >= 40 && number.id < 48) {
+    newItem(sous[number.id - 40], undefined, undefined);
+  } else if (number.id >= 48 && number.id < 52) {
+    newItem(npizza[number.id - 48], ves, undefined);
+  } else if (number.id >= 52 && number.id < 56) {
+    newItem(nsnek[number.id - 52], undefined, undefined);
+  } else if (number.id >= 56 && number.id < 60) {
+    newItem(ndrink[number.id - 56], undefined, undefined);
   }
 
-  let pizzaRef = number.id <= 13 ? pizza[number.id - 1] : pizza[0];
+  let pizzaRef = number.id <= 20 ? pizza[number.id - 1] : pizza[0];
   let drinkRef =
-    number.id >= 14 && number.id < 20 ? drink[number.id - 14] : drink[0];
+    number.id >= 21 && number.id < 27 ? drink[number.id - 21] : drink[0];
   let sneksRef =
-    number.id >= 20 && number.id < 33 ? sneks[number.id - 20] : sneks[0];
+    number.id >= 27 && number.id < 40 ? sneks[number.id - 27] : sneks[0];
   let sousRef =
-    number.id >= 33 && number.id < 41 ? sous[number.id - 33] : sous[0];
+    number.id >= 40 && number.id < 48 ? sous[number.id - 40] : sous[0];
   let npizzaRef =
-    number.id >= 41 && number.id < 45 ? npizza[number.id - 41] : npizza[0];
+    number.id >= 48 && number.id < 52 ? npizza[number.id - 48] : npizza[0];
   let nsnekRef =
-    number.id >= 45 && number.id < 49 ? nsnek[number.id - 45] : nsnek[0];
+    number.id >= 52 && number.id < 56 ? nsnek[number.id - 52] : nsnek[0];
   let ndrinkRef =
-    number.id >= 49 && number.id < 53 ? ndrink[number.id - 49] : ndrink[0];
+    number.id >= 56 && number.id < 60 ? ndrink[number.id - 56] : ndrink[0];
 
   let [pizzaState, setPizzaState] = useState(() => pizzaRef);
   const [drinkState, setDrinkState] = useState(() => drinkRef);
@@ -90,196 +90,44 @@ export const AllOrder: React.FC = () => {
   const [nsneksState, setNsneksState] = useState(() => nsnekRef);
   const [ndrinkState, setNdrinkState] = useState(() => ndrinkRef);
 
-  const [vesState, setVesState] = useState(() => ves);
   const [sizeState, setSizeState] = useState(() => size);
 
   const [costState, setCostState] = useState(() => pizzaRef.cost);
 
   const [ncostState, setNcostState] = useState(() => npizzaRef.cost);
 
-  const [style_line28State, setstyle_line28State] = useState(() => s.line28);
-  const [style_line33State, setstyle_line33State] = useState(() => s.no);
-  const [style_line45State, setstyle_line45State] = useState(() => s.no);
-
   useEffect(() => {
-    if (number.id <= 13) {
+    if (number.id <= 20) {
       setPizzaState(pizzaRef);
-    } else if (number.id >= 14 && number.id < 20) {
+    } else if (number.id >= 21 && number.id < 27) {
       setDrinkState(drinkRef);
-    } else if (number.id >= 20 && number.id < 33) {
+    } else if (number.id >= 27 && number.id < 40) {
       setSneksState(sneksRef);
-    } else if (number.id >= 33 && number.id < 41) {
+    } else if (number.id >= 40 && number.id < 48) {
       setSousState(sousRef);
-    } else if (number.id >= 41 && number.id < 45) {
+    } else if (number.id >= 48 && number.id < 52) {
       setNpizzaState(npizzaRef);
-    } else if (number.id >= 45 && number.id < 49) {
+    } else if (number.id >= 52 && number.id < 56) {
       setNsneksState(nsnekRef);
-    } else if (number.id >= 49 && number.id < 53) {
+    } else if (number.id >= 56 && number.id < 60) {
       setNdrinkState(ndrinkRef);
     }
   }, [number]);
 
-  let NewSize28 = () => {
-    if (sizeState === 33 || sizeState === 45) {
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          cost: pizzaRef.cost,
-        };
-      });
-
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          cost: npizzaRef.cost,
-        };
-      });
-
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setCostState(pizzaRef.cost);
-      setNcostState(npizzaRef.cost);
-
-      setSizeState(28);
-      setVesState(370);
-      setstyle_line28State(s.line28);
-      setstyle_line33State(s.no);
-      setstyle_line45State(s.no);
-    }
-  };
-
-  let NewSize33 = () => {
-    if (sizeState === 28 || sizeState === 45) {
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          cost: pizzaRef.cost * 2.7,
-        };
-      });
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          cost: npizzaRef.cost * 2.7,
-        };
-      });
-      setCostState(pizzaRef.cost * 2.7);
-      setNcostState(npizzaRef.cost * 2.7);
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          id: pizzaRef.id * 200,
-        };
-      });
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          id: npizzaRef.id * 200,
-        };
-      });
-
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setSizeState(33);
-      setVesState(580);
-      setstyle_line28State(s.no);
-      setstyle_line33State(s.line33);
-      setstyle_line45State(s.no);
-    }
-  };
-
-  let NewSize45 = () => {
-    if (sizeState === 28 || sizeState === 33) {
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          cost: pizzaRef.cost * 4,
-        };
-      });
-
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          cost: npizzaRef.cost * 4,
-        };
-      });
-      setCostState(pizzaRef.cost * 4);
-      setNcostState(npizzaRef.cost * 4);
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          id: pizzaRef.id * 300,
-        };
-      });
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          id: npizzaRef.id * 300,
-        };
-      });
-
-      setNpizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setPizzaState((actual) => {
-        return {
-          ...actual,
-          amount: 1,
-        };
-      });
-
-      setSizeState(45);
-      setVesState(1280);
-      setstyle_line28State(s.no);
-      setstyle_line33State(s.no);
-      setstyle_line45State(s.line45);
-    }
-  };
-
   let BuyItem = () => {
-    if (number.id <= 13) {
-      debugger;
+    if (number.id <= 20) {
       buys(pizzaState, costState, sizeState);
-    } else if (number.id >= 14 && number.id < 20) {
+    } else if (number.id >= 21 && number.id < 27) {
       buys(drinkRef, drinkRef.cost, 0);
-    } else if (number.id >= 20 && number.id < 33) {
+    } else if (number.id >= 27 && number.id < 40) {
       buys(sneksRef, sneksRef.cost, 0);
-    } else if (number.id >= 33 && number.id < 41) {
+    } else if (number.id >= 40 && number.id < 48) {
       buys(sousRef, sousRef.cost, 0);
-    } else if (number.id >= 41 && number.id < 45) {
-      debugger;
-
+    } else if (number.id >= 48 && number.id < 52) {
       buys(npizzaState, ncostState, sizeState);
-    } else if (number.id >= 45 && number.id < 49) {
+    } else if (number.id >= 52 && number.id < 56) {
       buys(nsnekRef, nsnekRef.cost, 0);
-    } else if (number.id >= 49 && number.id < 53) {
+    } else if (number.id >= 56 && number.id < 60) {
       buys(ndrinkRef, ndrinkRef.cost, 0);
     } else {
       buys(pizzaState, costState, sizeState);
@@ -288,29 +136,31 @@ export const AllOrder: React.FC = () => {
 
   let prov: any, link: any, name: any;
 
-  if (number.id < 14) {
+  if (number.id <= 20) {
     prov = pizzaState;
     link = "/profile/pizza";
     name = "Кондитерскі вироби";
-  } else if (number.id >= 14 && number.id < 20) {
+  } else if (number.id >= 21 && number.id < 27) {
     prov = drinkState;
     link = "/profile/drink";
     name = "Напої";
-  } else if (number.id >= 20 && number.id < 33) {
+  } else if (number.id >= 27 && number.id < 40) {
     prov = sneksState;
     link = "/profile/sneks";
     name = "Снеки";
-  } else if (number.id >= 33 && number.id < 41) {
+  } else if (number.id >= 40 && number.id < 48) {
     prov = sousState;
     link = "/profile/sous";
     name = "Соус";
-  } else if (number.id >= 41 && number.id < 45) {
+  } else if (number.id >= 48 && number.id < 52) {
     prov = npizzaState;
-  } else if (number.id >= 45 && number.id < 49) {
+    link = "/profile/pizza";
+    name = "Кондитерскі вироби";
+  } else if (number.id >= 52 && number.id < 56) {
     prov = nsneksState;
     link = "/profile/sneks";
     name = "Снеки";
-  } else if (number.id >= 49 && number.id < 53) {
+  } else if (number.id >= 56 && number.id < 60) {
     prov = ndrinkState;
     link = "/profile/drink";
     name = "Напої";
@@ -322,7 +172,7 @@ export const AllOrder: React.FC = () => {
     item = (
       <div className={s.container_item}>
         <div className={s.photo_item}>
-          <img src={prov.photoURL} alt="" height="400" width="400" />
+          <img src={prov.photoURL} alt="" height="350" width="350" />
         </div>
         <div className={s.item_info}>
           <div className={s.menu_info}>
@@ -339,7 +189,6 @@ export const AllOrder: React.FC = () => {
             <div className={s.cost_info}>{Math.round(prov.cost)} грн</div>
             <div className={s.strukture_info}>{prov.structure}</div>
           </div>
-
           <NavLink className={s.your_item} to="/buy" onClick={BuyItem}>
             Замовити
           </NavLink>

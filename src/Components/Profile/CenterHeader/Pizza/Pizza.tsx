@@ -11,6 +11,7 @@ export const Pizza: React.FC = () => {
   let BuyItem;
 
   const [page, setPage] = useState(1);
+
   const pizza = useSelector(getpizza);
   const dispatch = useDispatch();
 
@@ -29,54 +30,66 @@ export const Pizza: React.FC = () => {
   }
   return (
     <div className={s.pizza}>
-      {pizza.slice(page * 10 - 10, page * 10).map((u) => (
-        <div key={u.id}>
-          <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
-            <div className={s.pizza_container}>
-              <div className={s.pizza_all}>
-                <div className={s.pizza_all_photo}>
-                  <img src={u.photoURL} className={s.img} />
-                </div>
+      <div className={s.pizza_con}>
+        {pizza.slice(page * 10 - 10, page * 10).map((u) => (
+          <div key={u.id}>
+            <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
+              <div className={s.pizza_container}>
+                <div className={s.pizza_all}>
+                  <div className={s.pizza_all_photo}>
+                    <img src={u.photoURL} className={s.img} />
+                  </div>
 
-                <div className={s.pizza_all_name}>
-                  <div className={s.name}>{u.name}</div>
-                </div>
+                  <div className={s.pizza_all_name}>
+                    <div className={s.name}>{u.name}</div>
+                  </div>
 
-                <div className={s.pizza_all_cost}>
-                  <div className={s.cost}>{u.cost} грн</div>
-                </div>
+                  <div className={s.pizza_all_cost}>
+                    <div className={s.cost}>{u.cost} грн</div>
+                  </div>
 
-                <div className={s.pizza_all_structure}>
-                  <div className={s.structure}>{u.structure}</div>
-                </div>
+                  <div className={s.pizza_all_structure}>
+                    <div className={s.structure}>{u.structure}</div>
+                  </div>
 
-                <div className={s.pizza_all_bottom}>
-                  <div className={s.pizza_all_bottom_button}>
-                    <span className={s.button}>
-                      <NavLink
-                        className={s.your_buy}
-                        to={"/buy"}
-                        onClick={
-                          (BuyItem = () => {
-                            buys(pizza[u.id - 1], pizza[u.id - 1].cost, 28);
-                          })
-                        }
-                      >
-                        {" "}
-                        Замовити
-                      </NavLink>
-                    </span>
+                  <div className={s.pizza_all_bottom}>
+                    <div className={s.pizza_all_bottom_button}>
+                      <span className={s.button}>
+                        <NavLink
+                          className={s.your_buy}
+                          to={"/buy"}
+                          onClick={
+                            (BuyItem = () => {
+                              buys(pizza[u.id - 1], pizza[u.id - 1].cost, 28);
+                            })
+                          }
+                        >
+                          {" "}
+                          Замовити
+                        </NavLink>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </NavLink>
-        </div>
-      ))}
-      <p>
-        {pages.map((page) => (
-          <span onClick={() => setPage(page)}>{page}</span>
+            </NavLink>
+          </div>
         ))}
+      </div>
+      <p className={s.pages}>
+        {pages.map((page, i) => {
+          return (
+            <span
+              key={i}
+              onClick={() => {
+                setPage(page);
+              }}
+              className={s.page}
+            >
+              {page}
+            </span>
+          );
+        })}
       </p>
     </div>
   );

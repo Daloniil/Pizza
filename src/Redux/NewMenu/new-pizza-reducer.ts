@@ -9,7 +9,7 @@ import photoId44 from "../../Assets/Pizza/206549.webp";
 let initialState = {
   pizza: [
     {
-      id: 41,
+      id: 48,
       photoURL: photoId41,
       name: "Печиво Тіволі Грушеве",
       cost: 150,
@@ -18,7 +18,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 42,
+      id: 49,
       photoURL: photoId42,
       name: "Шоколад NUT SELECTION",
       cost: 62,
@@ -26,7 +26,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 43,
+      id: 50,
       photoURL: photoId43,
       name: "Шоколад чорний з начинкою марципан",
       cost: 64,
@@ -35,7 +35,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 44,
+      id: 51,
       photoURL: photoId44,
       name: "Хрусткі фігурки 'Kresko'",
       cost: 55,
