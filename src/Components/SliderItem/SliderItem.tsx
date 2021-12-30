@@ -124,7 +124,7 @@ export const SliderItems = () => {
               </div>
               <div className={s.text}>
                 <div className={s.name}>{u.name}</div>
-                <div className={s.cost}>Від {u.cost} грн</div>
+                <div className={s.cost}>{u.cost} грн</div>
               </div>
             </NavLink>
           </div>
