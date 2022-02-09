@@ -1,91 +1,67 @@
 .center_header {
-  background-color: #f2f0eb;
-}
-.center_header .center_header_container {
-  margin: 0 0 20px 0;
-}
-.center_header .center_header_container .center_header_container_text {
-  padding: 50px 0 0 0;
-  text-align: center;
-}
-.center_header .center_header_container .center_header_container_text span {
-  color: red;
-  font-size: 28px;
-}
-.center_header .center_header_container .center_header_container_text h2 {
-  color: #1272cc;
-  font-size: 40px;
-}
-.center_header .center_header_container .center_header_container_text p {
-  color: #57718a;
-  font-size: 18px;
-  margin: 0 10px 0 10px;
-}
-.center_header .center_header_container .center_header_container_text p a {
-  color: #57718a;
-  text-decoration: none;
-  font-weight: 700;
-}
-.center_header .menu {
-  display: flex;
-  justify-content: center;
-  margin: 0 10px 0 10px;
-}
-.center_header .menu .pizza {
-  padding: 0 20px 0 0;
-}
-.center_header .menu .pizza span .piza {
-  font-size: 22px;
-  color: #57718a;
-  text-decoration: none;
-}
-.center_header .menu .pizza span .piza:hover {
-  color: #f0c24d;
-}
-.center_header .menu .pizza span .ac {
-  color: #f0c24d;
-}
-.center_header .menu .sneks {
-  padding: 0 10px 0 0;
-}
-.center_header .menu .sneks span .snek {
-  font-size: 22px;
-  color: #57718a;
-  text-decoration: none;
-}
-.center_header .menu .sneks span .snek:hover {
-  color: #f0c24d;
-}
-.center_header .menu .sneks span .ac {
-  color: #f0c24d;
-}
-.center_header .menu .drink {
-  padding: 0 0 0 10px;
-}
-.center_header .menu .drink span .drin {
-  font-size: 22px;
-  color: #57718a;
-  text-decoration: none;
-}
-.center_header .menu .drink span .drin:hover {
-  color: #f0c24d;
-}
-.center_header .menu .drink span .ac {
-  color: #f0c24d;
-}
-.center_header .menu .soys {
-  padding: 0 0 0 20px;
-}
-.center_header .menu .soys span .soy {
-  font-size: 22px;
-  color: #57718a;
-  text-decoration: none;
-}
-.center_header .menu .soys span .soy:hover {
-  color: #f0c24d;
-}
-.center_header .menu .soys span .ac {
-  color: #f0c24d;
-}
+  background-color: #f2f0eb; }
+  .center_header .center_header_container {
+    margin: 0 0 20px 0; }
+    .center_header .center_header_container .center_header_container_text {
+      padding: 50px 0 0 0;
+      text-align: center; }
+      .center_header .center_header_container .center_header_container_text span {
+        color: red;
+        font-size: 28px; }
+      .center_header .center_header_container .center_header_container_text h2 {
+        color: #1272cc;
+        font-size: 40px; }
+      .center_header .center_header_container .center_header_container_text p {
+        color: #57718a;
+        font-size: 18px;
+        margin: 0 10px 0 10px; }
+        .center_header .center_header_container .center_header_container_text p a {
+          color: #57718a;
+          text-decoration: none;
+          font-weight: 700; }
+  .center_header .menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px 0 10px; }
+    .center_header .menu .pizza {
+      padding: 0 20px 0 0; }
+      .center_header .menu .pizza span .piza {
+        font-size: 22px;
+        color: #57718a;
+        text-decoration: none; }
+      .center_header .menu .pizza span .piza:hover {
+        color: #f0c24d; }
+      .center_header .menu .pizza span .ac {
+        color: #f0c24d; }
+    .center_header .menu .sneks {
+      padding: 0 10px 0 0; }
+      .center_header .menu .sneks span .snek {
+        font-size: 22px;
+        color: #57718a;
+        text-decoration: none; }
+      .center_header .menu .sneks span .snek:hover {
+        color: #f0c24d; }
+      .center_header .menu .sneks span .ac {
+        color: #f0c24d; }
+    .center_header .menu .drink {
+      padding: 0 0 0 10px; }
+      .center_header .menu .drink span .drin {
+        font-size: 22px;
+        color: #57718a;
+        text-decoration: none; }
+      .center_header .menu .drink span .drin:hover {
+        color: #f0c24d; }
+      .center_header .menu .drink span .ac {
+        color: #f0c24d; }
+    .center_header .menu .soys {
+      padding: 0 0 0 20px; }
+      .center_header .menu .soys span .soy {
+        font-size: 22px;
+        color: #57718a;
+        text-decoration: none; }
+      .center_header .menu .soys span .soy:hover {
+        color: #f0c24d; }
+      .center_header .menu .soys span .ac {
+        color: #f0c24d; }
 
 /*# sourceMappingURL=CenterHeader.module.css.map */

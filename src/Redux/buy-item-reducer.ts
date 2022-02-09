@@ -39,6 +39,7 @@ const buyItem = (
         amount: action.info.amount,
         photoURL: action.info.photoURL,
       };
+      debugger;
 
       if (action.size > 0) {
         if (!state.item.some((buy) => buy.id === action.info.id)) {
@@ -50,8 +51,6 @@ const buyItem = (
             amoun: state.amoun + action.info.amount,
           };
         } else {
-          debugger;
-
           if (!state.item.some((buy) => buy.size === action.size)) {
             return {
               ...state,
@@ -79,7 +78,7 @@ const buyItem = (
           ...state,
           item: [...state.item, buyeat],
           lenght: state.item.length,
-          amoun: state.amoun,
+          amoun: state.amoun + 1,
         };
       } else {
         let Id = action.info.id;
@@ -135,8 +134,6 @@ type ActionsTypes = actionsType<typeof actions>;
 
 export const actions = {
   buy: (info: ReducerType, cost: number, size: number) => {
-    debugger;
-
     return {
       type: "BUYITEM",
       info,

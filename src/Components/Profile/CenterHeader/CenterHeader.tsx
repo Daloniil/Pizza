@@ -10,7 +10,7 @@ const CenterHeader: React.FC = () => {
           <span>Смачне й швидке</span>
           <h2>Меню доставки</h2>
           <p>
-            Зробіть швидке замовлення, якщо Ви впевненні у своєму смаку та{" "}
+            Зробіть швидке замовлення, якщо Ви впевненні у своєму смаку та
             <br /> побажаннях. Якщо ні – для Вас є повне меню зі зручними
             фільтрами <br /> для пошуку у розділі <a href="#">Меню.</a>
           </p>
@@ -25,11 +25,10 @@ const CenterHeader: React.FC = () => {
               className={s.piza}
               activeClassName={s.ac}
             >
-              Кондитерскі вироби
+              Бакалія
             </NavLink>
           </span>
         </div>
-
         <div className={s.sneks}>
           <span>
             <NavLink
@@ -37,7 +36,7 @@ const CenterHeader: React.FC = () => {
               className={s.snek}
               activeClassName={s.ac}
             >
-              Снеки
+              Кондитерскі вироби
             </NavLink>
           </span>
         </div>
@@ -59,7 +58,7 @@ const CenterHeader: React.FC = () => {
               className={s.soy}
               activeClassName={s.ac}
             >
-              Соуси
+              Чай/Кофе
             </NavLink>
           </span>
         </div>
